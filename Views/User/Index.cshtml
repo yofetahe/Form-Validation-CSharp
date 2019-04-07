@@ -1,0 +1,38 @@
+﻿@model User
+<h1>Index View</h1>
+<form asp-action="AddUser" asp-controller="User" method="post">
+
+    <div class="form-group">
+        <div style="color: red;">
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <label asp-for="FirstName" class="form-control-label"></label>
+        <input asp-for="FirstName" ID="firstNameInput" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div style="color: red;"><span asp-validation-for="LastName"></span></div>
+        <label asp-for="LastName" class="form-control-label"></label>
+        <input asp-for="LastName" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div style="color: red;"><span asp-validation-for="Age"></span></div>
+        <label asp-for="Age" class="form-control-label"></label>
+        <input asp-for="Age" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div style="color: red;"><span asp-validation-for="Email"></span></div>
+        <label asp-for="Email" class="form-control-label"></label>
+        <input asp-for="Email" type="email" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <div style="color: red;"><span asp-validation-for="Password"></span></div>
+        <label asp-for="Password" class="form-control-label"></label>
+        <input asp-for="Password" type="password" class="form-control">
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
